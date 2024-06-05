@@ -60,3 +60,63 @@ title: {
   bottom: 10, // 主标题下边距
 }
 ```
+
+### tootip 属性解析
+
+```js
+tootip: {
+  show: true, // 是否显示
+  trigger: 'item', // 触发类型
+  triggerOn: 'mousemove', // 触发条件
+  showContent: true, // 是否显示内容
+  backgroundColor: 'red', // 提示框背景色
+  borderColor: 'blue', // 提示框边框颜色
+  borderWidth: 1, // 提示框边框宽度
+  textStyle: { // 提示框文本样式
+    color: 'black', // 文字颜色
+  },
+  formatter: '{a} <br/>{b} : {c}', // 自定义提示框内容
+  axisPointer: {
+    type: 'line', // 指示器类型 line shadow cross
+    axis: 'auto', // 指示器坐标轴
+    snap: false, // 是否吸附
+    z: 10, // 层级
+    label: {
+      show: true, // 是否显示
+      precision: 0, // 小数精度
+      margin: 8, // 间距
+      color: 'red', // 文字颜色
+      fontStyle: 'normal', // 文字风格
+      fontWeight: 'normal', // 文字粗细
+      fontFamily: 'sans-serif', // 文字字体
+      fontSize: 12, // 文字大小
+      lineHeight: 30, // 文字行高
+      backgroundColor: 'red', // 文字背景色
+      borderColor: 'blue', // 文字边框颜色
+      borderWidth: 1, // 文字边框宽度
+      padding: 5, // 文字内边距
+      shadowColor: 'black', // 文字阴影颜色
+      shadowBlur: 10, // 文字阴影模糊大小
+      shadowOffsetX: 5, // 文字阴影水平偏移
+      shadowOffsetY: 5, // 文字阴影垂直偏移
+      textBorderColor: 'blue', // 文字描边颜色
+      textBorderWidth: 1, // 文字描边宽度
+      textShadowColor: 'black', // 文字描边阴影颜色
+      textShadowBlur: 10, // 文字描边阴影模糊大小
+      textShadowOffsetX: 5, // 文字描边阴影水平偏移
+      textShadowOffsetY: 5, // 文字描边阴影垂直偏移
+      textPadding: 5, // 文字描边内边距
+      rich: { // 富文本
+        a: {
+          color: 'red',
+          lineHeight: 30
+        },
+        b: {
+          color: 'blue',
+          lineHeight: 30
+        }
+      }
+    }
+  },
+}
+```

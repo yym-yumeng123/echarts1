@@ -53,7 +53,25 @@ onMounted(() => {
         },
       },
     },
-    tooltip: {},
+    // 提示框
+    tooltip: {
+      trigger: 'axis', // 触发类型
+      show: true, // 是否显示提示框
+      axisPointer: {
+        type: 'shadow', // 指示器类型
+        label: {
+          backgroundColor: '#6a7985', // 文字背景颜色
+        },
+      },
+      textStyle: {
+        color: 'red', // 文字颜色
+      },  
+      showContent: true, // 是否显示提示框浮层
+      formatter (params) {
+        console.log(params)
+        return `${params[0].name}: ${params[0].value}`;
+      }, // 提示框浮层内容格式器
+    },
     // x轴
     xAxis: {
       data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
