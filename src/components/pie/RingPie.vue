@@ -8,11 +8,15 @@ onMounted(() => {
   // 柱状图
   myEcharts.setOption({
     title: {
-      text: "饼状图",
+      text: "环形饼状图",
       link: "https://echarts.apache.org/zh/index.html",
       target: "self",
     },
-    tootip: {},
+    tootip: {
+      show: true,
+      trigger: "item",
+      formatter: "{a} <br/>{b}: {c} ({d}%)",
+    },
     legend: {
       left: 'left',
       top: 40,
@@ -24,8 +28,12 @@ onMounted(() => {
       {
         name: "访问来源",
         type: "pie", // 饼状图
-        radius: "55%", // 饼状图的半径
-        roseType: "area", // 面积模式
+        radius: ["50%", "70%"], // 第一项内半径, 第二项外半径
+        label: {
+          // show: false, // 不显示标签
+          position: "outside", // 标签的位置 outside, inside, center
+        },
+        // roseType: "area", // 面积模式
         data: [
           { value: 235, name: "视频广告" },
           { value: 274, name: "联盟广告" },
@@ -40,5 +48,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="myChart" id="pie1" style="width: 600px; height: 400px"></div>
+  <div ref="myChart" id="pie2" style="width: 600px; height: 400px"></div>
 </template>
