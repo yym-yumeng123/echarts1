@@ -167,3 +167,65 @@ legend: {
   }
 }
 ```
+
+### series 系列 属性解析
+
+```js
+series: [
+  {
+    data: [10, 20, 30, 40, 50], // 数据
+    type: 'line', // 系列类型 line bar pie scatter effectScatter radar tree treemap sunburst boxplot candlestick heatmap map parallel lines graph sankey funnel gauge pictorialBar themeRiver custom
+    name: '系列1', // 系列名称
+    // 图表标注
+    markPoint: {
+      data: [
+        {
+          name: '最大值',
+          type: 'max',
+          valueIndex: 0,
+          symbol: 'pin',
+          symbolSize: 50,
+          symbolRotate: 0,
+          symbolOffset: [0, 0],
+          itemStyle: {
+            color: 'red',
+            borderColor: 'blue',
+            borderWidth: 1,
+            borderType: 'solid',
+            shadowBlur: 10,
+            shadowColor: 'black',
+            shadowOffsetX: 5,
+            shadowOffsetY: 5,
+            opacity: 1
+          },
+          label: {
+            show: true,
+            position: 'top',
+            color: 'black',
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontFamily: 'sans-serif',
+            fontSize: 12,
+            lineHeight: 30,
+            backgroundColor: 'red',
+            borderColor: 'blue',
+            borderWidth: 1,
+            padding: 5,
+            shadowColor: 'black',
+            shadowBlur: 10,
+            shadowOffsetX: 5,
+            shadowOffsetY: 5,
+            textBorderColor: 'blue',
+            textBorderWidth: 1,
+            textShadowColor: 'black',
+            textShadowBlur: 10,
+            textShadowOffsetX: 5,
+            textShadowOffsetY: 5,
+            textPadding: 5
+          }
+        }
+      ]
+    }
+  }
+]
+```

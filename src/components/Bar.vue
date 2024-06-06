@@ -25,9 +25,40 @@ onMounted(() => {
     // 系列: 对应数组, 配置图标的类型
     series: [
       {
-        name: '日期',
+        name: "日期",
         type: "bar", // 系列类别
         data: [150, 230, 224, 218, 135, 147, 260], // 对应 y 轴的数据
+        // 最大值和最小值
+        markPoint: {
+          data: [
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
+          ],
+        },
+        markLine: {
+          data: [
+            {
+              name: "平均值",
+              type: "average",
+              // valueIndex: 0,
+              // symbol: "pin",
+              // symbolSize: 50,
+              // symbolRotate: 0,
+              // symbolOffset: [0, 0],
+              itemStyle: {
+                color: "red",
+                borderColor: "blue",
+                borderWidth: 1,
+                borderType: "solid",
+                shadowBlur: 10,
+                shadowColor: "black",
+                shadowOffsetX: 5,
+                shadowOffsetY: 5,
+                opacity: 1,
+              },
+            },
+          ],
+        },
       },
     ],
   });
