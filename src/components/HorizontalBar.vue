@@ -11,16 +11,16 @@ onMounted(() => {
       text: "ECharts 入门示例",
       link: "https://echarts.apache.org/zh/index.html",
       target: "self",
-      subtext: "柱状图",
+      subtext: "水平柱状图",
     },
     // x 轴 參數
     xAxis: {
+      type: "value",
+    },
+    yAxis: {
       // 坐标轴类型: 类目轴
       type: "category",
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    },
-    yAxis: {
-      // type: "value",
     },
     tootip: {},
     // 系列: 对应数组, 配置图标的类型
@@ -29,10 +29,34 @@ onMounted(() => {
         name: "日期",
         type: "bar", // 系列类别
         data: [150, 230, 224, 218, 135, 147, 260], // 对应 y 轴的数据
+        barWidth: 20,
+        itemStyle: {
+          normal: {
+            color(params) {
+              const colorList = [
+                "#C1232B",
+                "#B5C334",
+                "#FCCE10",
+                "#E87C25",
+                "#27727B",
+                "#FE8463",
+                "#9BCA63",
+              ];
+              return colorList[params.dataIndex];
+            },
+            label: {
+              show: true,
+              position: "right",
+              textStyle: {
+                color: "black",
+              },
+            },
+          },
+        },
         // 最大值和最小值
         markPoint: {
           data: [
-            { type: "max", name: "最大值" },
+            { type: "max", name: "最大值", valueIndex: 0 },
             { type: "min", name: "最小值" },
           ],
         },

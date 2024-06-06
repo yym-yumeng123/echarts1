@@ -174,58 +174,132 @@ legend: {
 series: [
   {
     data: [10, 20, 30, 40, 50], // 数据
-    type: 'line', // 系列类型 line bar pie scatter effectScatter radar tree treemap sunburst boxplot candlestick heatmap map parallel lines graph sankey funnel gauge pictorialBar themeRiver custom
-    name: '系列1', // 系列名称
+    type: "bar", // 系列类型 line bar pie scatter effectScatter radar tree treemap sunburst boxplot candlestick heatmap map parallel lines graph sankey funnel gauge pictorialBar themeRiver custom
+    name: "系列1", // 系列名称
+    // 图表样式
+    itemStyle: {
+      normal: {
+        color(params) {
+          const colorList = [
+            "#C1232B",
+            "#B5C334",
+            "#FCCE10",
+            "#E87C25",
+            "#27727B",
+            "#FE8463",
+            "#9BCA63",
+          ]
+          return colorList[params.dataIndex]
+        },
+        label: {
+          show: true,
+          position: "right",
+          textStyle: {
+            color: "black",
+          },
+        },
+      },
+    },
     // 图表标注
     markPoint: {
       data: [
         {
-          name: '最大值',
-          type: 'max',
+          name: "最大值",
+          type: "max",
           valueIndex: 0,
-          symbol: 'pin',
+          symbol: "pin",
           symbolSize: 50,
           symbolRotate: 0,
           symbolOffset: [0, 0],
           itemStyle: {
-            color: 'red',
-            borderColor: 'blue',
+            color: "red",
+            borderColor: "blue",
             borderWidth: 1,
-            borderType: 'solid',
+            borderType: "solid",
             shadowBlur: 10,
-            shadowColor: 'black',
+            shadowColor: "black",
             shadowOffsetX: 5,
             shadowOffsetY: 5,
-            opacity: 1
+            opacity: 1,
           },
           label: {
             show: true,
-            position: 'top',
-            color: 'black',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            fontFamily: 'sans-serif',
+            position: "top",
+            color: "black",
+            fontStyle: "normal",
+            fontWeight: "normal",
+            fontFamily: "sans-serif",
             fontSize: 12,
             lineHeight: 30,
-            backgroundColor: 'red',
-            borderColor: 'blue',
+            backgroundColor: "red",
+            borderColor: "blue",
             borderWidth: 1,
             padding: 5,
-            shadowColor: 'black',
+            shadowColor: "black",
             shadowBlur: 10,
             shadowOffsetX: 5,
             shadowOffsetY: 5,
-            textBorderColor: 'blue',
+            textBorderColor: "blue",
             textBorderWidth: 1,
-            textShadowColor: 'black',
+            textShadowColor: "black",
             textShadowBlur: 10,
             textShadowOffsetX: 5,
             textShadowOffsetY: 5,
-            textPadding: 5
-          }
-        }
-      ]
-    }
-  }
+            textPadding: 5,
+          },
+        },
+      ],
+    },
+    // 图表标线
+    markLine: {
+      data: [
+        {
+          name: "平均值",
+          type: "average",
+          valueIndex: 0,
+          symbol: "pin",
+          symbolSize: 50,
+          symbolRotate: 0,
+          symbolOffset: [0, 0],
+          itemStyle: {
+            color: "red",
+            borderColor: "blue",
+            borderWidth: 1,
+            borderType: "solid",
+            shadowBlur: 10,
+            shadowColor: "black",
+            shadowOffsetX: 5,
+            shadowOffsetY: 5,
+            opacity: 1,
+          },
+          label: {
+            show: true,
+            position: "top",
+            color: "black",
+            fontStyle: "normal",
+            fontWeight: "normal",
+            fontFamily: "sans-serif",
+            fontSize: 12,
+            lineHeight: 30,
+            backgroundColor: "red",
+            borderColor: "blue",
+            borderWidth: 1,
+            padding: 5,
+            shadowColor: "black",
+            shadowBlur: 10,
+            shadowOffsetX: 5,
+            shadowOffsetY: 5,
+            textBorderColor: "blue",
+            textBorderWidth: 1,
+            textShadowColor: "black",
+            textShadowBlur: 10,
+            textShadowOffsetX: 5,
+            textShadowOffsetY: 5,
+            textPadding: 5,
+          },
+        },
+      ],
+    },
+  },
 ]
 ```
