@@ -15,7 +15,6 @@ onMounted(() => {
       borderColor: "red",
       borderWidth: 1,
       itemGap: 10,
-      x: "center",
       y: "top",
       // textAlign: 'center',
       textStyle: {
@@ -68,9 +67,19 @@ onMounted(() => {
       },  
       showContent: true, // 是否显示提示框浮层
       formatter (params) {
-        console.log(params)
         return `${params[0].name}: ${params[0].value}`;
       }, // 提示框浮层内容格式器
+    },
+    // 图例
+    legend: {
+      show: true, // 是否显示图例
+      icon: 'pin', // 图例项的 icon
+      type: 'plain', // 图例的类型
+      // itemWidth: 30, // 图例标记的图形宽度
+      // itemHeight: 24, // 图例标记的图形高度
+      textStyle: {
+        color: 'red', // 文字颜色
+      },
     },
     // x轴
     xAxis: {

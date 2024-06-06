@@ -120,3 +120,50 @@ tootip: {
   },
 }
 ```
+
+### legend 图例 属性解析
+
+```js
+legend: {
+  show: true, // 是否显示
+  icon: 'circle', // 图例图标类型 circle rect roundRect triangle diamond pin arrow none
+  type: 'plain', // 图例类型 plain scroll
+  left: 10, // 图例左边距
+  right: 10, // 图例右边距
+  top: 10, // 图例上边距
+  bottom: 10, // 图例下边距
+  width: 'auto', // 图例宽度
+  height: 'auto', // 图例高度
+  orient: 'horizontal', // 图例布局方式 horizontal vertical
+  align: 'auto', // 图例水平对齐方式 auto left center right
+  padding: 5, // 图例内边距
+  itemGap: 10, // 图例项之间的间距
+  itemWidth: 25, // 图例项宽度
+  itemHeight: 14, // 图例项高度
+  formatter: '{name}', // 格式化图例文本
+  selectedMode: true, // 是否可选中
+  inactiveColor: '#ccc', // 未选中图例颜色
+  selected: { // 默认选中
+    '系列1': true,
+    '系列2': false
+  },
+  textStyle: {
+    color: 'black', // 文字颜色
+    fontStyle: 'normal', // 文字风格
+    fontWeight: 'normal', // 文字粗细
+    fontFamily: 'sans-serif', // 文字字体
+    fontSize: 12, // 文字大小
+    lineHeight: 30, // 文字行高
+    backgroundColor: 'red', // 文字背景色
+    borderColor: 'blue', // 文字边框颜色
+    borderWidth: 1, // 文字边框宽度
+    padding: 5, // 文字内边距
+    shadowColor: 'black', // 文字阴影颜色
+    shadowBlur: 10, // 文字阴影模糊大小
+    shadowOffsetX: 5, // 文字阴影水平偏移
+    shadowOffsetY: 5, // 文字阴影垂直偏移
+    textBorderColor: 'blue', // 文字描边颜色
+    textBorderWidth: 1, // 文字描边宽度
+  }
+}
+```
