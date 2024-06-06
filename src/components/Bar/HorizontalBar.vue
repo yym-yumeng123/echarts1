@@ -91,5 +91,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="myChart" id="bar1" style="width: 600px; height: 400px"></div>
+  <div ref="myChart" id="bar2" style="width: 600px; height: 400px"></div>
 </template>
