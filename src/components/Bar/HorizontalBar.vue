@@ -31,27 +31,23 @@ onMounted(() => {
         data: [150, 230, 224, 218, 135, 147, 260], // 对应 y 轴的数据
         barWidth: 20,
         itemStyle: {
-          normal: {
-            color(params) {
-              const colorList = [
-                "#C1232B",
-                "#B5C334",
-                "#FCCE10",
-                "#E87C25",
-                "#27727B",
-                "#FE8463",
-                "#9BCA63",
-              ];
-              return colorList[params.dataIndex];
-            },
-            label: {
-              show: true,
-              position: "right",
-              textStyle: {
-                color: "black",
-              },
-            },
+          color(params) {
+            const colorList = [
+              "#C1232B",
+              "#B5C334",
+              "#FCCE10",
+              "#E87C25",
+              "#27727B",
+              "#FE8463",
+              "#9BCA63",
+            ];
+            return colorList[params.dataIndex];
           },
+        },
+        label: {
+          show: true,
+          position: "right",
+          color: "black",
         },
         // 最大值和最小值
         markPoint: {

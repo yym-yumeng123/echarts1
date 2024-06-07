@@ -4,6 +4,7 @@ import HorizontalBar from "./components/Bar/HorizontalBar.vue";
 import Pie from "./components/pie/Pie.vue";
 import RingPie from "./components/pie/RingPie.vue";
 import Line from "./components/line/BasicLine.vue";
+import MultipleLine from "./components/line/MultipleLine.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Line from "./components/line/BasicLine.vue";
     <Pie />
     <RingPie />
     <Line />
+    <MultipleLine />
   </div>
 </template>
 
