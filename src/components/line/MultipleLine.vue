@@ -21,6 +21,9 @@ onMounted(() => {
     yAxis: {
       type: "value",
     },
+    tooltip: {
+      trigger: "axis",
+    },
     // 系列: 对应数组, 配置图标的类型
     series: [
       {

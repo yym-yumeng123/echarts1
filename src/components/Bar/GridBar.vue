@@ -22,6 +22,7 @@ onMounted(() => {
     yAxis: {
       // type: "value",
     },
+    tooltip: {},
     grid: {
       // 控制网格的上下左右距离
       left: "20%",

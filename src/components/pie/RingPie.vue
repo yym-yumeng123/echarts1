@@ -12,7 +12,7 @@ onMounted(() => {
       link: "https://echarts.apache.org/zh/index.html",
       target: "self",
     },
-    tootip: {
+    tooltip: {
       show: true,
       trigger: "item",
       formatter: "{a} <br/>{b}: {c} ({d}%)",

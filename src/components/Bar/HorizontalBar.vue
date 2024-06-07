@@ -22,7 +22,7 @@ onMounted(() => {
       type: "category",
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     },
-    tootip: {},
+    tooltip: {},
     // 系列: 对应数组, 配置图标的类型
     series: [
       {

@@ -21,6 +21,10 @@ onMounted(() => {
     legend: {
       data: ["散点"],
     },
+    tooltip: {
+      show: true,
+      trigger: "item",
+    },
     // 系列: 对应数组, 配置图标的类型
     series: [
       {

@@ -22,7 +22,7 @@ onMounted(() => {
     yAxis: {
       // type: "value",
     },
-    tootip: {},
+    tooltip: {},
     // 系列: 对应数组, 配置图标的类型
     series: [
       {

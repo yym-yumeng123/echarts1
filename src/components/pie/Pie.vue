@@ -12,7 +12,7 @@ onMounted(() => {
       link: "https://echarts.apache.org/zh/index.html",
       target: "self",
     },
-    tootip: {},
+    tooltip: {},
     legend: {
       left: 'left',
       top: 40,

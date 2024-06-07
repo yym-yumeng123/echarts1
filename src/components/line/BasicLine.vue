@@ -14,6 +14,9 @@ onMounted(() => {
     },
     legend: {
     },
+    tooltip: {
+      trigger: "axis",
+    },
     xAxis: {
       type: "category",
       data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
