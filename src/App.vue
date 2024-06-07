@@ -10,6 +10,7 @@ import Scatter from "./components/scatter/Basicscatter.vue";
 import Candlestick from "./components/candlestick/Candlestick.vue";
 import Radar from "./components/radar/BasicRadar.vue";
 import Funnel from "./components/funnel/Funnel.vue";
+import Guage from "./components/guage/Guage.vue";
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import Funnel from "./components/funnel/Funnel.vue";
     <Candlestick />
     <Radar />
     <Funnel />
+    <Guage />
   </div>
 </template>
 
