@@ -11,6 +11,7 @@ import Candlestick from "./components/candlestick/Candlestick.vue";
 import Radar from "./components/radar/BasicRadar.vue";
 import Funnel from "./components/funnel/Funnel.vue";
 import Guage from "./components/guage/Guage.vue";
+import Graph from "./components/graph/Graph.vue";
 </script>
 
 <template>
@@ -27,6 +28,7 @@ import Guage from "./components/guage/Guage.vue";
     <Radar />
     <Funnel />
     <Guage />
+    <Graph />
   </div>
 </template>
 
