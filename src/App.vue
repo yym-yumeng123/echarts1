@@ -7,6 +7,7 @@ import RingPie from "./components/pie/RingPie.vue";
 import Line from "./components/line/BasicLine.vue";
 import MultipleLine from "./components/line/MultipleLine.vue";
 import Scatter from "./components/scatter/Basicscatter.vue";
+import Candlestick from "./components/candlestick/Candlestick.vue";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Scatter from "./components/scatter/Basicscatter.vue";
     <Line />
     <MultipleLine />
     <Scatter />
+    <Candlestick />
   </div>
 </template>
 
