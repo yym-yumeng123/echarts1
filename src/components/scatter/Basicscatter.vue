@@ -27,6 +27,10 @@ onMounted(() => {
         name: "散点",
         type: "scatter", // 散点图
         symbolSize: 20, // 散点的大小
+        tootip: {
+          show: true,
+          trigger: "item",
+        },
         // x, y 轴的数据
         data: [
           [10.0, 8.04],
@@ -41,6 +45,34 @@ onMounted(() => {
           [7.0, 4.82],
           [5.0, 5.68],
         ],
+        // 散点的颜色
+        color: {
+          // 线性渐变
+          type: "linear",
+          // 相当于在图形包围盒中的坐标, 0, 0 表示左下角, 1, 1 表示右上角
+          x: 0,
+          y: 0,
+          x2: 1,
+          y2: 0,
+          // 颜色的渐变
+          colorStops: [
+            {
+              offset: 0,
+              color: "red", // 0% 处的颜色
+            },
+            {
+              offset: 1,
+              color: "blue", // 100% 处的颜色
+            },
+          ],
+        },
+        // 鼠标移入高亮的样式
+        emphasis: {
+          itemStyle: {
+            borderColor: "black",
+            borderWidth: 2,
+          }
+        },
       },
     ],
   });
