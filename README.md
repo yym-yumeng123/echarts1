@@ -303,3 +303,25 @@ series: [
   },
 ]
 ```
+
+### grid 网格 属性解析
+
+```js
+grid: {
+  show: true, // 是否显示
+  left: 10, // 网格左边距
+  right: 10, // 网格右边距
+  top: 10, // 网格上边距
+  bottom: 10, // 网格下边距
+  width: 'auto', // 网格宽度
+  height: 'auto', // 网格高度
+  containLabel: false, // 是否包含坐标轴标签
+  backgroundColor: 'red', // 网格背景色
+  borderColor: 'blue', // 网格边框颜色
+  borderWidth: 1, // 网格边框宽度
+  shadowBlur: 10, // 网格阴影模糊大小
+  shadowColor: 'black', // 网格阴影颜色
+  shadowOffsetX: 5, // 网格阴影水平偏移
+  shadowOffsetY: 5, // 网格阴影垂直偏移
+}
+```
