@@ -9,6 +9,7 @@ import MultipleLine from "./components/line/MultipleLine.vue";
 import Scatter from "./components/scatter/Basicscatter.vue";
 import Candlestick from "./components/candlestick/Candlestick.vue";
 import Radar from "./components/radar/BasicRadar.vue";
+import Funnel from "./components/funnel/Funnel.vue";
 </script>
 
 <template>
@@ -23,6 +24,7 @@ import Radar from "./components/radar/BasicRadar.vue";
     <Scatter />
     <Candlestick />
     <Radar />
+    <Funnel />
   </div>
 </template>
 
