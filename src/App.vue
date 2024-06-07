@@ -8,6 +8,7 @@ import Line from "./components/line/BasicLine.vue";
 import MultipleLine from "./components/line/MultipleLine.vue";
 import Scatter from "./components/scatter/Basicscatter.vue";
 import Candlestick from "./components/candlestick/Candlestick.vue";
+import Radar from "./components/radar/BasicRadar.vue";
 </script>
 
 <template>
@@ -21,6 +22,7 @@ import Candlestick from "./components/candlestick/Candlestick.vue";
     <MultipleLine />
     <Scatter />
     <Candlestick />
+    <Radar />
   </div>
 </template>
 
