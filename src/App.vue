@@ -5,6 +5,7 @@ import GridBar from "./components/Bar/GridBar.vue";
 import Pie from "./components/pie/Pie.vue";
 import RingPie from "./components/pie/RingPie.vue";
 import Line from "./components/line/BasicLine.vue";
+import DataZoomLine from "./components/line/DataZoomLine.vue";
 import MultipleLine from "./components/line/MultipleLine.vue";
 import Scatter from "./components/scatter/Basicscatter.vue";
 import Candlestick from "./components/candlestick/Candlestick.vue";
@@ -23,6 +24,7 @@ import Graph from "./components/graph/Graph.vue";
     <RingPie />
     <Line />
     <MultipleLine />
+    <DataZoomLine />
     <Scatter />
     <Candlestick />
     <Radar />

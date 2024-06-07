@@ -325,3 +325,45 @@ grid: {
   shadowOffsetY: 5, // 网格阴影垂直偏移
 }
 ```
+
+### dataZoom 数据区域缩放 属性解析
+
+```js
+dataZoom: [
+  {
+    show: true, // 是否显示
+    type: "slider", // 缩放类型 slider inside slider
+    xAxisIndex: 0, // x轴索引
+    yAxisIndex: 0, // y轴索引
+    filterMode: "filter", // 缩放模式 filter weakFilter empty
+    start: 0, // 起始位置
+    end: 100, // 结束位置
+    orient: "horizontal", // 缩放方向 horizontal vertical
+    zoomLock: false, // 是否锁定
+    zoomOnMouseWheel: true, // 是否鼠标滚轮缩放
+    moveOnMouseMove: true, // 是否鼠标移动缩放
+    moveOnMouseWheel: true, // 是否鼠标滚轮移动
+    showDetail: true, // 是否显示详细信息
+    showDataShadow: "auto", // 是否显示数据阴影
+    realtime: true, // 是否实时更新
+    textStyle: {
+      color: "black", // 文字颜色
+      fontStyle: "normal", // 文字风格
+      fontWeight: "normal", // 文字粗细
+      fontFamily: "sans-serif", // 文字字体
+      fontSize: 12, // 文字大小
+      lineHeight: 30, // 文字行高
+      backgroundColor: "red", // 文字背景色
+      borderColor: "blue", // 文字边框颜色
+      borderWidth: 1, // 文字边框宽度
+      padding: 5, // 文字内边距
+      shadowColor: "black", // 文字阴影颜色
+      shadowBlur: 10, // 文字阴影模糊大小
+      shadowOffsetX: 5, // 文字阴影水平偏移
+      shadowOffsetY: 5, // 文字阴影垂直偏移
+      textBorderColor: "blue", // 文字描边颜色
+      textBorderWidth: 1, // 文字描边宽度
+    },
+  },
+]
+```
