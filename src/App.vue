@@ -15,6 +15,7 @@ import Guage from "./components/guage/Guage.vue";
 import Graph from "./components/graph/Graph.vue";
 import Tree from "./components/tree/BasicTree.vue";
 import DataSet from "./components/dataset/DataSet.vue";
+import Map from "./components/map/Map.vue";
 </script>
 
 <template>
@@ -35,6 +36,7 @@ import DataSet from "./components/dataset/DataSet.vue";
     <Graph />
     <Tree />
     <DataSet />
+    <Map />
   </div>
 </template>
 
