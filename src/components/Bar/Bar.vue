@@ -1,10 +1,17 @@
 <script setup>
 import * as echarts from "echarts";
-import { onMounted, ref } from "vue";
+import { nextTick, onMounted, ref, watch } from "vue";
 const myChart = ref(null);
+// 主题
+const theme = ref("default");
+
+// 切换主题
+const hnadleChangeTheme = () => {
+  console.log('3232')
+};
 
 onMounted(() => {
-  const myEcharts = echarts.init(myChart.value);
+  const myEcharts = echarts.init(myChart.value, 'dark');
   // 柱状图
   myEcharts.setOption({
     title: {
@@ -67,5 +74,6 @@ onMounted(() => {
 </script>
 
 <template>
+  <button @click="hnadleChangeTheme">切换主题</button>
   <div ref="myChart" id="bar1" style="width: 600px; height: 400px"></div>
 </template>

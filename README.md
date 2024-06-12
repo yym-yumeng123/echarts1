@@ -2,6 +2,17 @@
 
 使用 vue3 + echarts 来实现一个简单的数据可视化项目
 
+### 主题设置
+
+```js
+/**
+ * echarts 主题设置
+ * @param {string} theme 主题名称
+ * @param {object} config 主题配置
+ */
+echarts.init(document.getElementById('main'), 'dark')
+```
+
 ### title 属性解析
 
 ```js
