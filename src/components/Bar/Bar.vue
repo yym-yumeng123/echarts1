@@ -12,6 +12,9 @@ const hnadleChangeTheme = () => {
 
 onMounted(() => {
   const myEcharts = echarts.init(myChart.value, 'dark');
+  myEcharts.on("click", (params) => {
+    console.log(params);
+  });
   // 柱状图
   myEcharts.setOption({
     title: {
@@ -70,6 +73,7 @@ onMounted(() => {
       },
     ],
   });
+
 });
 </script>
 

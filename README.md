@@ -30,6 +30,79 @@ echarts.registerTheme('myTheme', {
 })
 ```
 
+### 图表自适应
+
+```js
+// 监听窗口变化
+window.addEventListener("resize", () => {
+  myEcharts.resize();
+});
+```
+
+### 加载动画效果 loading
+
+```js
+echarts.showLoading({
+  text: '加载中...',
+  color: 'red',
+  textColor: 'blue',
+  maskColor: 'rgba(0, 0, 0, 0.8)',
+  zlevel: 0,
+  z: 0,
+})
+
+// 隐藏加载动画
+echarts.hideLoading()
+
+// 动画
+animation: false, // 是否开启动画
+animationThreshold: 2000, // 动画阈值
+animationDuration: 1000, // 动画时长
+animationEasing: 'linear', // 动画缓动效果
+animationDelay: 0, // 动画延迟
+// ...
+```
+
+### echarts 事件
+
+```js
+// 点击事件
+echarts.on('click', (params) => {
+  /**
+   * params
+   * @param {object} params 参数
+   * @param {string} params.type 事件类型
+   * @param {string} params.name 系列名称
+   * @param {string} params.dataIndex 数据索引
+   * @param {string} params.data 数据
+   * @param {string} params.seriesIndex 系列索引
+   * @param {string} params.seriesName 系列名称
+   * @param {string} params.value 数据值
+   * @param {string} params.color 数据颜色
+   * @param {string} params.dimensionNames 维度名称
+   * @param {string} params.encode 编码
+   */
+  console.log(params)
+})
+
+/**
+ * 事件类型 类型缩小
+ * click 鼠标点击
+ * dblclick 鼠标双击
+ * mousedown 鼠标按下
+ * 
+ * 第二个参数
+ * series.bar 柱状图
+ * series.line 折线图
+ * series.pie 饼图
+ * 对象
+ * { name: '', seriesIndex: 1 }
+ */
+echarts.on('click', 'series.line', (params) => {
+  console.log(params)
+}
+```
+
 ### title 属性解析
 
 ```js

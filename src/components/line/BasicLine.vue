@@ -55,9 +55,13 @@ onMounted(() => {
       },
     ],
   });
+  // 监听窗口变化
+  window.addEventListener("resize", () => {
+    myEcharts.resize();
+  });
 });
 </script>
 
 <template>
-  <div ref="myChart" id="line1" style="width: 600px; height: 400px"></div>
+  <div ref="myChart" id="line1" style="width: 100%; height: 400px"></div>
 </template>

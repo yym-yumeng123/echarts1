@@ -1,9 +1,9 @@
 <!-- 中国地图 -->
 <script setup>
 // 中国地图json 数据
-import mapJson from '../../assets/map.json'
+import mapJson from "../../assets/map.json";
 // 安徽地图json 数据
-import anhuiJson from '../../assets/anhui.json'
+import anhuiJson from "../../assets/anhui.json";
 import * as echarts from "echarts";
 import { onMounted, ref } from "vue";
 const myChart = ref(null);
@@ -31,25 +31,19 @@ onMounted(() => {
       zoom: 1.2, // 缩放比例
       // center: [104.114129, 37.550339], // 中心点
       label: {
-        normal: {
-          show: true,
-          textStyle: {
-            color: "rgba(0,0,0,0.4)",
-          },
-        },
+        show: true,
+        color: "rgba(0,0,0,0.4)",
       },
       itemStyle: {
-        normal: {
-          borderColor: "rgba(0, 0, 0, 0.2)",
-        },
-        emphasis: {
-          areaColor: null,
-          shadowOffsetX: 0,
-          shadowOffsetY: 0,
-          shadowBlur: 20,
-          borderWidth: 0,
-          shadowColor: "rgba(0, 0, 0, 0.5)",
-        },
+        borderColor: "rgba(0, 0, 0, 0.2)",
+      },
+      emphasis: {
+        areaColor: null,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowBlur: 20,
+        borderWidth: 0,
+        shadowColor: "rgba(0, 0, 0, 0.5)",
       },
     },
     series: [
@@ -83,11 +77,10 @@ onMounted(() => {
           show: true,
           formatter: "{b}",
         },
-        
       },
       {
-        type: 'effectScatter', // 涟漪效果散点图
-        coordinateSystem: 'geo',
+        type: "effectScatter", // 涟漪效果散点图
+        coordinateSystem: "geo",
         data: [
           // 坐标点 [经度, 纬度, 值]
           { name: "上海", value: [121.48, 31.22, 100] },
@@ -95,20 +88,20 @@ onMounted(() => {
         // 设置涟漪效果
         rippleEffect: {
           number: 5, // 涟漪的数量
-          brushType: 'stroke',
+          brushType: "stroke",
           scale: 5, // 涟漪的大小
         },
         itemStyle: {
-          color: 'red',
+          color: "red",
         },
-      }
-    ]
+      },
+    ],
   });
 });
 </script>
 
 <template>
   <div>
-    <div ref="myChart" id="map" style="width: 100%; height: 600px;"></div>
+    <div ref="myChart" id="map" style="width: 100%; height: 600px"></div>
   </div>
 </template>
