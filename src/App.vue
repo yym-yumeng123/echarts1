@@ -14,6 +14,7 @@ import Funnel from "./components/funnel/Funnel.vue";
 import Guage from "./components/guage/Guage.vue";
 import Graph from "./components/graph/Graph.vue";
 import Tree from "./components/tree/BasicTree.vue";
+import DataSet from "./components/dataset/DataSet.vue";
 </script>
 
 <template>
@@ -33,6 +34,7 @@ import Tree from "./components/tree/BasicTree.vue";
     <Guage />
     <Graph />
     <Tree />
+    <DataSet />
   </div>
 </template>
 

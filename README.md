@@ -368,7 +368,7 @@ dataZoom: [
 ]
 ```
 
-### dataSet 数据集 属性解析
+### dataSet 数据集 属性解析 => 对数据单独管理
 
 ```js
 dataSet: {
