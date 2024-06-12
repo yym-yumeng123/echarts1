@@ -11,7 +11,7 @@ const myChart = ref(null);
 onMounted(() => {
   const myEcharts = echarts.init(myChart.value);
   // 中国地图 注册地图 json
-  echarts.registerMap("china", anhuiJson);
+  echarts.registerMap("china", mapJson);
   myEcharts.setOption({
     title: {
       text: "ECharts 入门示例",
@@ -52,6 +52,57 @@ onMounted(() => {
         },
       },
     },
+    series: [
+      // 散点图
+      {
+        type: "scatter",
+        coordinateSystem: "geo",
+        data: [
+          // 坐标点 [经度, 纬度, 值]
+          { name: "北京", value: [116.46, 39.92, 100] },
+          { name: "广州", value: [113.23, 23.16, 100] },
+          { name: "深圳", value: [114.07, 22.62, 100] },
+          { name: "重庆", value: [106.54, 29.59, 100] },
+          { name: "天津", value: [117.2, 39.13, 100] },
+          { name: "成都", value: [104.06, 30.67, 100] },
+          { name: "南京", value: [118.78, 32.04, 100] },
+          { name: "武汉", value: [114.31, 30.52, 100] },
+          { name: "西安", value: [108.95, 34.27, 100] },
+          { name: "郑州", value: [113.65, 34.76, 100] },
+          { name: "长沙", value: [113, 28.21, 100] },
+          { name: "沈阳", value: [123.38, 41.8, 100] },
+          { name: "哈尔滨", value: [126.63, 45.75, 100] },
+          { name: "太原", value: [112.53, 37.87, 100] },
+          { name: "西宁", value: [101.74, 36.56, 100] },
+          { name: "兰州", value: [103.73, 36.03, 100] },
+          { name: "银川", value: [106.27, 38.47, 100] },
+        ],
+        coordinateSystem: "geo", // 坐标系设置
+        symbolSize: 20, // 散点的大小
+        label: {
+          show: true,
+          formatter: "{b}",
+        },
+        
+      },
+      {
+        type: 'effectScatter', // 涟漪效果散点图
+        coordinateSystem: 'geo',
+        data: [
+          // 坐标点 [经度, 纬度, 值]
+          { name: "上海", value: [121.48, 31.22, 100] },
+        ],
+        // 设置涟漪效果
+        rippleEffect: {
+          number: 5, // 涟漪的数量
+          brushType: 'stroke',
+          scale: 5, // 涟漪的大小
+        },
+        itemStyle: {
+          color: 'red',
+        },
+      }
+    ]
   });
 });
 </script>

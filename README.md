@@ -2,6 +2,8 @@
 
 使用 vue3 + echarts 来实现一个简单的数据可视化项目
 
+- [地图数据](https://datav.aliyun.com/portal/school/atlas/area_selector)
+
 ### 主题设置
 
 ```js
