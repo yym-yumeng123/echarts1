@@ -367,3 +367,22 @@ dataZoom: [
   },
 ]
 ```
+
+### dataSet 数据集 属性解析
+
+```js
+dataSet: {
+  source: [
+    { name: "系列1", value: 10 },
+    { name: "系列2", value: 20 },
+    { name: "系列3", value: 30 },
+    { name: "系列4", value: 40 },
+    { name: "系列5", value: 50 },
+  ],
+  // 数据集维度
+  dimensions: [
+    { name: "name", type: "ordinal" },
+    { name: "value", type: "number" },
+  ],
+}
+```

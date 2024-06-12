@@ -13,6 +13,7 @@ import Radar from "./components/radar/BasicRadar.vue";
 import Funnel from "./components/funnel/Funnel.vue";
 import Guage from "./components/guage/Guage.vue";
 import Graph from "./components/graph/Graph.vue";
+import Tree from "./components/tree/BasicTree.vue";
 </script>
 
 <template>
@@ -31,6 +32,7 @@ import Graph from "./components/graph/Graph.vue";
     <Funnel />
     <Guage />
     <Graph />
+    <Tree />
   </div>
 </template>
 
