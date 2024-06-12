@@ -21,6 +21,7 @@ onMounted(() => {
     series: [
       {
         type: "tree",
+        orient: "horizontal", // 树图的方向 vertical | horizontal | radial | RL | LR | TB | BT
         data: [
           {
             // 根节点
@@ -96,7 +97,7 @@ onMounted(() => {
           label: {
             show: true, // 显示标签
             position: "right", // 标签的位置
-            rotate: 0, // 标签的旋转角度
+            rotate: 30, // 标签的旋转角度
             color: "#000", // 标签的颜色
             fontStyle: "normal", // 标签的字体风格
             fontWeight: "normal",  // 标签的字体粗细
